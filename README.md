@@ -4,7 +4,7 @@
 
 ### PROJECTS TABLE : 
 
-|    NAME   |   LINK   |
+|N°|    NAME   |   LINK   |
 |---------- |----------|
-| BLINK LED | https://github.com/latoufC/18f452-microcontroller/tree/main/BLINK_LED |
+|1| BLINK LED | https://github.com/latoufC/18f452-microcontroller/tree/main/BLINK_LED |
 

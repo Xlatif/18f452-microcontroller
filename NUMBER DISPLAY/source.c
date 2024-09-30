@@ -1,3 +1,8 @@
+/*
+ * DISPLAYING NUMBERS(0 TO 9) IN 7 SEGMENT DISPLAY
+ * USING TIMER0 TO GENERATE DELAY
+ * IN ORDER TO CHANGE DELAY YOU HAVE TO PASS THE CORRESPONDING VALUES NEEDED TO ACHIEVE THE DESIRED DELAY
+*/
 #include <p18f452.h>
 #pragma config WDT = OFF
 
@@ -23,18 +28,18 @@ void VECTOR(void)
 
 void main(void)
 {
-	unsigned char counter = 0;
-	TRISD = 0xF0;
+	unsigned char counter = 0;	// COUNTER USED TO COUNT NUMBERS
+	TRISD = 0xF0;			// THE LOWEST NIBBLE OF PORTD AS OUTPUT
 	while(TRUE)
 	{
-		if(counter != 0x0A)
+		if(counter != 0x0A)	// CHECK IF COUNTER DOES NOT EXCEEDS 0x0A
 		{
-			LATD = counter;
-			delay(0x02, 0x0B, 0xDC);	
-			++counter;
+			LATD = counter;	
+			delay(0x02, 0x0B, 0xDC);		// PASS ARGUMENTS NEEDED TO GENERATE THE DESIRED DELAY
+			++counter;				// INCREMENT THE COUNTER
 		}
 		else
-			counter = 0;
+			counter = 0;				// RESET THE COUNTER
 	}
 }
 
